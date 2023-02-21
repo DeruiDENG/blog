@@ -3,7 +3,7 @@ title: The New World
 date: "2020-04-22T18:20:03.284Z"
 description: "My first post"
 ---
-![Gatsby Logo](gatsby.png)
+![Gatsby Logo](posts/2020-04-22-gatsby.png)
 
 ```jsx
 const divStyle = {
