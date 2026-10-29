@@ -1,19 +1,29 @@
-import React, { Component } from 'react';
+'use client';
 
-export class Comments extends Component {
-  componentDidMount() {
+import { useEffect, useRef } from 'react';
+
+export function Comments() {
+  const commentContainerRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const container = commentContainerRef.current;
+    if (!container) return;
+
+    // Clear any previous comments to avoid duplicates on route changes
+    container.innerHTML = '';
+
     const script = document.createElement('script');
-    const anchor = document.getElementById('inject-comments-for-uterances');
-    script.setAttribute('src', 'https://utteranc.es/client.js');
-    script.setAttribute('crossorigin', 'anonymous');
-    script.setAttribute('async', 'true');
+    script.src = 'https://utteranc.es/client.js';
+    script.async = true;
+    script.crossOrigin = 'anonymous';
     script.setAttribute('repo', 'DeruiDENG/blogs-comment');
     script.setAttribute('issue-term', 'pathname');
     script.setAttribute('theme', 'github-light');
-    anchor?.appendChild(script);
-  }
 
-  render() {
-    return <div id="inject-comments-for-uterances" />;
-  }
+    container.appendChild(script);
+  }, []);
+
+  return <div ref={commentContainerRef} id="inject-comments-for-uterances" />;
 }
+
+export default Comments;

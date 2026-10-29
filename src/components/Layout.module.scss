@@ -1,4 +1,4 @@
-@import '../styles/theme.scss';
+@use '../styles/theme' as *;
 
 .site-header {
   margin-bottom: 1rem;

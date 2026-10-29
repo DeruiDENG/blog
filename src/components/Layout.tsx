@@ -9,20 +9,21 @@ interface Props {
 }
 
 const Layout = ({ isHomePage, children }: Props) => {
+  const headerClass = `${styles['site-header']} ${isHomePage ? '' : styles.smaller}`;
+
   return (
     <div className={styles.site}>
       <header>
-        <h1
-          className={`${styles.siteHeader} ${isHomePage ? '' : styles.smaller}`}
-        >
+        <h1 className={headerClass}>
           <Link href="/">{siteTitle}</Link>
         </h1>
       </header>
       <main>{children}</main>
       <footer>
-        © {new Date().getFullYear()}, built with
-        {` `}
-        <a href="https://nextjs.org/">NextJs</a>
+        © {new Date().getFullYear()}, built with{' '}
+        <a href="https://nextjs.org/" target="_blank" rel="noopener noreferrer">
+          Next.js
+        </a>
       </footer>
     </div>
   );

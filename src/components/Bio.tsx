@@ -1,14 +1,17 @@
+import Image from 'next/image';
 import styles from './Bio.module.scss';
 import { author } from '../utils/meta';
 
 const Bio = () => {
   return (
-    <div className={styles.bioContainer}>
-      {/*<Image*/}
-      {/*  fixed={data.avatar.childImageSharp.fixed}*/}
-      {/*  alt={author.name}*/}
-      {/*  className={styles.bioImage}*/}
-      {/*/>*/}
+    <div className={styles['bio-container']}>
+      <Image
+        src="/profile-image.jpeg"
+        alt={author.name}
+        width={50}
+        height={50}
+        className={styles['bio-image']}
+      />
       <div>
         Personal blog by{' '}
         <strong>

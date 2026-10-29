@@ -1,4 +1,4 @@
-@import '../theme';
+@use '../theme' as *;
 
 .title {
   margin-top: 1.75rem;

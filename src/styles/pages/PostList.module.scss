@@ -1,4 +1,4 @@
-@import '../theme';
+@use '../theme' as *;
 
 .blog {
   margin-bottom: 3rem;
