@@ -116,6 +116,25 @@ describe('posts api utils', () => {
       expect(post).not.toBeNull();
       expect(post?.slug).toBe(specialSlug);
     });
+
+    it('renders code blocks with Shiki syntax highlighting classes and styles', async () => {
+      const post = await getPostData('2020-11-05-理解几种常见的global-css-keyword');
+      expect(post).not.toBeNull();
+      if (!post) return;
+
+      // Check for shiki pre tag and highlighted spans
+      expect(post.html).toContain('class="shiki one-dark-pro"');
+      expect(post.html).toMatch(/<span style="color:\s*#[0-9a-fA-F]+/i);
+    });
+
+    it('preserves raw HTML such as embedded iframe', async () => {
+      const post = await getPostData('2020-12-30-登陆表单的最佳实践');
+      expect(post).not.toBeNull();
+      if (!post) return;
+
+      expect(post.html).toContain('<iframe');
+      expect(post.html).toContain('youtube.com/embed');
+    });
   });
 });
 

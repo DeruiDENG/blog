@@ -1,6 +1,5 @@
 import '../styles/global.scss';
 import '../styles/theme.scss';
-import '../prism-onedark.css';
 import type { Metadata } from 'next';
 import { siteTitle, author } from '../utils/meta';
 
