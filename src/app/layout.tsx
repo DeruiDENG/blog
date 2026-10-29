@@ -1,5 +1,4 @@
-import '../styles/global.scss';
-import '../styles/theme.scss';
+import '../styles/globals.css';
 import type { Metadata } from 'next';
 import { siteTitle, author } from '../utils/meta';
 
@@ -27,4 +26,3 @@ export default function RootLayout({
     </html>
   );
 }
-
