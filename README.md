@@ -9,7 +9,7 @@ This is my personal blog built with [Next.js 16](https://nextjs.org/) (App Route
 - **Language**: TypeScript 5
 - **Styling**: Tailwind CSS (with `@tailwindcss/typography`)
 - **Content**: Markdown with `gray-matter`, `unified` & `Shiki` (`@shikijs/rehype` compile-time syntax highlighting)
-- **Comments**: [Utterances](https://utteranc.es/)
+- **Comments**: [Giscus](https://giscus.app/) (GitHub Discussions, auto dark mode, specific term mapping, managed via GitHub Actions variables)
 - **Testing**: [Vitest](https://vitest.dev/) with React Testing Library
 - **Linting & Formatting**: ESLint 9 (Flat Config) & Prettier
 - **Package Manager**: [pnpm](https://pnpm.io/)
@@ -22,19 +22,23 @@ This is my personal blog built with [Next.js 16](https://nextjs.org/) (App Route
    ```bash
    pnpm install
    ```
-3. Run development server:
+3. Initialize local environment variables (pulls from GitHub into `.env.local`):
+   ```bash
+   pnpm dev:init
+   ```
+4. Run development server:
    ```bash
    pnpm dev
    ```
-4. Run test suite:
+5. Run test suite:
    ```bash
    pnpm test
    ```
-5. Run linter:
+6. Run linter:
    ```bash
    pnpm lint
    ```
-6. Build static export / production bundle:
+7. Build static export / production bundle:
    ```bash
    pnpm build
    ```

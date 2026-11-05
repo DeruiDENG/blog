@@ -9,3 +9,8 @@
   - `feat: modernize eslint and markdown handling`
   - `test: add unit test framework`
 
+## Code Comments & In-Code Documentation
+- **Language**: All in-code comments, JSDoc/TSDoc comments, docstrings, and inline notes across all source code and script files must be written **strictly in English**.
+- **No Chinese in Comments**: Never use Chinese characters or other non-English languages in source code comments, regardless of the conversation language with the user.
+- **Clarity & Brevity**: Keep comments concise, accurate, and focused on explaining non-obvious intent rather than restating self-explanatory code.
+
