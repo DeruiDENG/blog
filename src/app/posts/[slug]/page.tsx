@@ -63,7 +63,7 @@ export default async function PostPage({ params }: Props) {
 
         <hr className="my-10 border-t border-zinc-200 dark:border-zinc-800" />
 
-        <Comments />
+        <Comments slug={slug} />
       </article>
 
       <nav

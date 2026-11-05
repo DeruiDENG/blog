@@ -73,7 +73,7 @@ describe('PostPage', () => {
 
       // Check Comments container is rendered
       expect(
-        container.querySelector('#inject-comments-for-uterances')
+        container.querySelector('#comments-container')
       ).toBeInTheDocument();
     });
   });
